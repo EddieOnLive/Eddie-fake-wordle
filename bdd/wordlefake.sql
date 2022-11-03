@@ -37,156 +37,155 @@ CREATE TABLE `palabras` (
 --
 
 INSERT INTO `palabras` (`id`, `palabra`) VALUES
-(1, 'ARCOS')
-(2, 'BARRA')
-(3, 'CODOS')
-(4, 'DOLOR')
-(5, 'ESTAR')
-(6, 'FUNGI')
-(7, 'GUISO')
-(8, 'HIPPO')
-(9, 'ICONO')
-(10, 'JODER')
-(11, 'ATADO')
-(12, 'LOADO')
-(13, 'MANOS')
-(14, 'NODOS')
-(15, 'OTROS')
-(16, 'POTRO')
-(17, 'QUISO')
-(18, 'RUIDO')
-(19, 'SIMIO')
-(20, 'TUMBA')
-(21, 'UNICO')
-(22, 'VAGAR')
-(23, 'GASTA')
-(24, 'VIRGO')
-(25, 'URGAR')
-(26, 'BRAVO')
-(27, 'VARGO')
-(28, 'DANZA')
-(29, 'ARABE')
-(30, 'BURRO')
-(31, 'ELEVA')
-(32, 'BOTAS')
-(33, 'JUEGA')
-(34, 'COMER')
-(35, 'SUPER')
-(36, 'TRAPO')
-(37, 'LENTE')
-(38, 'YERBA')
-(39, 'TECLA')
-(40, 'TERMO')
-(41, 'BORDE')
-(42, 'OSCAR')
-(43, 'ESTOS')
-(44, 'INGLE')
-(45, 'BOINA')
-(46, 'CARRO')
-(47, 'QUESO')
-(48, 'NEGRO')
-(49, 'POSTE')
-(50, 'SENTIR')
-(51, 'MONTE')
-(52, 'EXCEL')
-(53, 'PESTE')
-(54, 'SESOS')
-(55, 'HOTEL')
-(56, 'LOBOS')
-(57, 'NOCHE')
-(58, 'RETRO')
-(59, 'NUBES')
-(60, 'BIRRA')
-(61, 'CORRE')
-(62, 'PECHO')
-(63, 'SOSOS')
-(64, 'SOBRA')
-(65, 'HONOR')
-(66, 'PANSA')
-(67, 'TANGO')
-(68, 'MOSCA')
-(69, 'AIRES')
-(70, 'HIELO')
-(71, 'JUEGO')
-(72, 'USADO')
-(73, 'SUAVE')
-(74, 'VERDE')
-(75, 'COGER')
-(76, 'ESTAS')
-(77, 'OSCOS')
-(78, 'POBRE')
-(79, 'VOLAR')
-(79, 'REMOS')
-(80, 'JUGAR')
-(81, 'SALAR')
-(82, 'GORDO')
-(83, 'COMBO')
-(84, 'ANTES')
-(85, 'SURCA')
-(86, 'OLIVO')
-(87, 'HIJOS')
-(88, 'PISTA')
-(89, 'LOMAS')
-(90, 'MOUSE')
-(91, 'BOLSA')
-(92, 'GATOS')
-(93, 'MILLA')
-(94, 'KANES')
-(95, 'KILOS')
-(96, 'ENTES')
-(97, 'ISTIO')
-(98, 'ENTRO')
-(99, 'TESIS')
-(100, 'PLANO')
-(101, 'OSTRA')
-(102, 'HITOS')
-(103, 'REGLA')
-(104, 'VIDAS')
-(105, 'LUEGO')
-(106, 'JARRA')
-(107, 'MAMBO')
-(108, 'QATAR')
-(109, 'VALOR')
-(110, 'TACOS')
-(111, 'REMAR')
-(112, 'JADEA')
-(113, 'HACEN')
-(114, 'SETAS')
-(115, 'PANES')
-(116, 'CASCO')
-(117, 'CANOS')
-(118, 'OGROS')
-(119, 'MITOS')
-(120, 'MOCOS')
-(121, 'ORDEN')
-(122, 'MUSAS')
-(123, 'MOTAS')
-(124, 'MANDA')
-(125, 'TURCO')
-(126, 'ALTAS')
-(127, 'PERLA')
-(128, 'MANGO')
-(129, 'COCOA')
-(130, 'CUELA')
-(131, 'DARDO')
-(132, 'CROMO')
-(133, 'SALTO')
-(134, 'APILA')
-(135, 'ALTEO')
-(136, 'AGRIO')
-(137, 'AGUDA')
-(138, 'CACAO')
-(139, 'BETAS')
-(140, 'CACEO')
-(141, 'MAZOS')
-(142, 'TORCO')
-(143, 'TERCO')
-(144, 'AEREO')
-(145, 'CORTO')
-(146, 'FARDO')
-(147, 'NARDO')
-(148, 'CARDO')
-(149, 'TOSCO')
+(1, 'ARCOS'),
+(2, 'BARRA'),
+(3, 'CODOS'),
+(4, 'DOLOR'),
+(5, 'ESTAR'),
+(6, 'FUNGI'),
+(7, 'GUISO'),
+(8, 'HIPPO'),
+(9, 'ICONO'),
+(10, 'JODER'),
+(11, 'ATADO'),
+(12, 'LOADO'),
+(13, 'MANOS'),
+(14, 'NODOS'),
+(15, 'OTROS'),
+(16, 'POTRO'),
+(17, 'QUISO'),
+(18, 'RUIDO'),
+(19, 'SIMIO'),
+(20, 'TUMBA'),
+(21, 'UNICO'),
+(22, 'VAGAR'),
+(23, 'GASTA'),
+(24, 'VIRGO'),
+(25, 'URGAR'),
+(26, 'BRAVO'),
+(27, 'VARGO'),
+(28, 'DANZA'),
+(29, 'ARABE'),
+(30, 'BURRO'),
+(31, 'ELEVA'),
+(32, 'BOTAS'),
+(33, 'JUEGA'),
+(34, 'COMER'),
+(35, 'SUPER'),
+(36, 'TRAPO'),
+(37, 'LENTE'),
+(38, 'YERBA'),
+(39, 'TECLA'),
+(40, 'TERMO'),
+(41, 'BORDE'),
+(42, 'OSCAR'),
+(43, 'ESTOS'),
+(44, 'INGLE'),
+(45, 'BOINA'),
+(46, 'CARRO'),
+(47, 'QUESO'),
+(48, 'NEGRO'),
+(49, 'POSTE'),
+(50, 'SUBIR'),
+(51, 'MONTE'),
+(52, 'EXCEL'),
+(53, 'PESTE'),
+(54, 'SESOS'),
+(55, 'HOTEL'),
+(56, 'LOBOS'),
+(57, 'NOCHE'),
+(58, 'RETRO'),
+(59, 'NUBES'),
+(60, 'BIRRA'),
+(61, 'CORRE'),
+(62, 'PECHO'),
+(63, 'SOSOS'),
+(64, 'SOBRA'),
+(65, 'HONOR'),
+(66, 'PANSA'),
+(67, 'TANGO'),
+(68, 'MOSCA'),
+(69, 'AIRES'),
+(70, 'HIELO'),
+(71, 'JUEGO'),
+(72, 'USADO'),
+(73, 'SUAVE'),
+(74, 'VERDE'),
+(75, 'COGER'),
+(76, 'ESTAS'),
+(77, 'OSCOS'),
+(78, 'POBRE'),
+(79, 'VOLAR'),
+(80, 'JUGAR'),
+(81, 'SALAR'),
+(82, 'GORDO'),
+(83, 'COMBO'),
+(84, 'ANTES'),
+(85, 'SURCA'),
+(86, 'OLIVO'),
+(87, 'HIJOS'),
+(88, 'PISTA'),
+(89, 'LOMAS'),
+(90, 'MOUSE'),
+(91, 'BOLSA'),
+(92, 'GATOS'),
+(93, 'MILLA'),
+(94, 'KANES'),
+(95, 'KILOS'),
+(96, 'ENTES'),
+(97, 'ISTIO'),
+(98, 'ENTRO'),
+(99, 'TESIS'),
+(100, 'PLANO'),
+(101, 'OSTRA'),
+(102, 'HITOS'),
+(103, 'REGLA'),
+(104, 'VIDAS'),
+(105, 'LUEGO'),
+(106, 'JARRA'),
+(107, 'MAMBO'),
+(108, 'QATAR'),
+(109, 'VALOR'),
+(110, 'TACOS'),
+(111, 'REMAR'),
+(112, 'JADEA'),
+(113, 'HACEN'),
+(114, 'SETAS'),
+(115, 'PANES'),
+(116, 'CASCO'),
+(117, 'CANOS'),
+(118, 'OGROS'),
+(119, 'MITOS'),
+(120, 'MOCOS'),
+(121, 'ORDEN'),
+(122, 'MUSAS'),
+(123, 'MOTAS'),
+(124, 'MANDA'),
+(125, 'TURCO'),
+(126, 'ALTAS'),
+(127, 'PERLA'),
+(128, 'MANGO'),
+(129, 'COCOA'),
+(130, 'CUELA'),
+(131, 'DARDO'),
+(132, 'CROMO'),
+(133, 'SALTO'),
+(134, 'APILA'),
+(135, 'ALTEO'),
+(136, 'AGRIO'),
+(137, 'AGUDA'),
+(138, 'CACAO'),
+(139, 'BETAS'),
+(140, 'CACEO'),
+(141, 'MAZOS'),
+(142, 'TORCO'),
+(143, 'TERCO'),
+(144, 'AEREO'),
+(145, 'CORTO'),
+(146, 'FARDO'),
+(147, 'NARDO'),
+(148, 'CARDO'),
+(149, 'TOSCO'),
 (150, 'MUERE');
 
 -- --------------------------------------------------------
@@ -195,7 +194,7 @@ INSERT INTO `palabras` (`id`, `palabra`) VALUES
 -- Estructura de tabla para la tabla `usuario`
 --
 
-CREATE TABLE `usuario` (
+CREATE TABLE `user` (
   `id` int(11) NOT NULL,
   `user` varchar(32) NOT NULL,
   `password` varchar(32) NOT NULL,
@@ -206,7 +205,7 @@ CREATE TABLE `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `user`, `password`, `palabra`) VALUES
+INSERT INTO `user` (`id`, `user`, `password`, `palabra`) VALUES
 (1, 'admin', 'admin', 1);
 
 --
@@ -222,7 +221,7 @@ ALTER TABLE `palabras`
 --
 -- Indices de la tabla `usuario`
 --
-ALTER TABLE `usuario`
+ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -238,7 +237,7 @@ ALTER TABLE `palabras`
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
-ALTER TABLE `usuario`
+ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 

@@ -1,0 +1,30 @@
+{% extends './layout.html' %}
+{% block title%}login{%endblock%}
+{% block body %} 
+    <div>
+        <div>
+            <div>
+                <div>
+                    <h1>Iniciar Sesión</h1>
+                </div>
+                <div>
+                    <form action="/sesion" method="POST">
+                        <input type="text" name="nombre" class="nombre obj" autocomplete="off" placeholder="Nombre">
+                        <input type="password" name="pass" class="pass obj" autocomplete="off"  placeholder="Contraseña">
+                        <button class="button" type="submit">Conectar</button>
+                    </form>
+                </div>
+                <div>
+                    {% with messages = get_flashed_messages()  %}
+                    {% if messages %}
+                        <p>{{messages}}</p>
+                    {% endif %}
+                    {% endwith %}
+                </div>
+                <div>
+                    <p>No tienes una cuenta</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
