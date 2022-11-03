@@ -20,9 +20,14 @@ def obtener():
 @app.route('/login.html')
 def login():
     return render_template('login.html')
+
 @app.route('/register.html')
 def register():
     return render_template('register.html')
+
+@app.route('/menu.html')
+def menu():
+    return render_template('menu.html')
 
 @app.route('/sesion',methods = ['POST'])
 def sesion():
