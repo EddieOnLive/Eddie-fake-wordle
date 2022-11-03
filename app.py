@@ -20,6 +20,9 @@ def obtener():
 @app.route('/login.html')
 def login():
     return render_template('login.html')
+@app.route('/register.html')
+def register():
+    return render_template('register.html')
 
 @app.route('/sesion',methods = ['POST'])
 def sesion():
@@ -58,10 +61,27 @@ def sesion():
             return redirect(url_for('login'))
     return
 
-
-
-
-
+@app.route('/register',methods = ['POST'])
+def registrar():
+    bandn = False
+    if request.method == 'POST':
+        name = request.form['nombre']
+        pasw = request.form['pass']
+        data = obtener()
+        for i in data:
+            if name in i:
+                bandn = False
+                break
+            else:
+                bandn = True
+        if bandn == True:
+            cur = mysql.connection.cursor()
+            cur.execute("INSERT INTO user (user, password, palabra) VALUES (%s, %s, %s)",(name, pasw, 1))
+            mysql.connection.commit()
+            return redirect(url_for('login'))
+        else:
+            flash("Ya existe el nombre de usuario")
+            return redirect(url_for("register"))
 
 
 

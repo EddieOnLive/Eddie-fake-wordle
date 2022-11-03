@@ -1,0 +1,32 @@
+{% extends './layout.html' %}
+{% block title%}Registrarse{%endblock%}
+{% block body %} 
+<div>  
+    <div>
+        <div>
+            <div>
+                <h1 class="obj">Registrarse</h1>
+            </div>
+                <div class="inputs a">
+                    <form action="/register" method="POST" class="inputs">
+                        <input type="text" name="nombre" class="nombre obj" autocomplete="off" placeholder="Nombre">
+                        <input type="password" name="pass" class="pass obj" autocomplete="off"  placeholder="Contraseña">
+                        <button class="button" type="submit">Registrarse</button>
+                    </form>
+                </div>
+                <div>
+                    <p>
+                        {% with messages = get_flashed_messages()  %}
+                        {% if messages %}
+                            {{messages}}
+                        {% endif %}
+                        {% endwith %}
+                    </p>
+                </div>
+                <div>
+                    <p>Ya tienes una cuenta <a href="/login.html"">Iniciar Sesión</a></p>
+                </div>
+        </div>
+    </div>
+</div>  
+{% endblock %}

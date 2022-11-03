@@ -206,7 +206,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `user`, `password`, `palabra`) VALUES
-(1, 'admin', 'admin', 1);
+(1, 'admin', 'admin', 1),
+(2, 'Imanol', 'Imanol', 1);
 
 --
 -- Índices para tablas volcadas
