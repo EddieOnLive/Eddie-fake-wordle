@@ -11,10 +11,22 @@ mysql = MySQL(app)
 
 def obtener():
     cur = mysql.connection.cursor()
-    cur.execute('SELECT user,password FROM user')
+    cur.execute('SELECT id, user, password FROM user')
     data = cur.fetchall()
     cur.close()
     return data
+
+def getPalabra():
+    may = mysql.connection.cursor()
+    may.execute("SELECT palabra FROM user WHERE id = %s", [aidi])
+    numPalabra = may.fetchall()
+    may.close()
+    cur = mysql.connection.cursor()
+    cur.execute("SELECT palabra FROM palabras WHERE id = %s", [numPalabra])
+    palabraUsuario = cur.fetchall()
+    cur.close()
+    return palabraUsuario
+
 
 @app.route('/')
 @app.route('/login.html')
@@ -25,13 +37,17 @@ def login():
 def register():
     return render_template('register.html')
 
+@app.route('/player.html')
+def player():
+    return render_template('player.html', palabra = getPalabra())
+
 @app.route('/menu.html')
 def menu():
     return render_template('menu.html')
 
 @app.route('/sesion',methods = ['POST'])
 def sesion():
-
+    global aidi
     bandn = True
     bandp = True
 
@@ -43,6 +59,7 @@ def sesion():
         for i in data:
             if name in i:
                 bandn = True
+                aidi = i[0]
                 break
             else:
                 bandn = False
@@ -56,6 +73,7 @@ def sesion():
         
         if bandn == True:
             if bandp == True:
+                print(getPalabra())
                 return render_template('menu.html')
             
             else:
@@ -87,11 +105,6 @@ def registrar():
         else:
             flash("Ya existe el nombre de usuario")
             return redirect(url_for("register"))
-
-
-
-
-
 
 
 #Esta wea siempre al final

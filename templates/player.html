@@ -1,0 +1,47 @@
+{% extends './layout.html' %}
+{% block title%}player{%endblock%}
+{% block body %} 
+<input type="text" value="{{palabra.0.0}}" style="display:none" class="input">
+    <div class="cajitas"></div>
+    <div class="botones">
+        <div>
+            <button class="bq">Q</button>
+            <button class="bq">W</button>
+            <button class="bq">E</button>
+            <button class="bq">R</button>
+            <button class="bq">T</button>
+            <button class="bq">Y</button>
+            <button class="bq">U</button>
+            <button class="bq">I</button>
+            <button class="bq">O</button>
+            <button class="bq">P</button>
+        </div>
+        <div>
+            <button class="bq">A</button>
+            <button class="bq">S</button>
+            <button class="bq">D</button>
+            <button class="bq">F</button>
+            <button class="bq">G</button>
+            <button class="bq">H</button>
+            <button class="bq">J</button>
+            <button class="bq">K</button>
+            <button class="bq">L</button>
+        </div>
+        <div>
+            <button>Enviar</button>
+            <button class="bq">Z</button>
+            <button class="bq">X</button>
+            <button class="bq">C</button>
+            <button class="bq">V</button>
+            <button class="bq">B</button>
+            <button class="bq">N</button>
+            <button class="bq">M</button>
+            <button>Borrar</button>
+        </div>
+    </div>
+
+
+{% block scrip %}
+    <script src="{{ url_for('static',filename='player.js') }}"></script>
+{% endblock %}
+{% endblock %}
