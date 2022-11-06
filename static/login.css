@@ -1,0 +1,44 @@
+.inicio-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 280px;
+    height: 250px;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    margin: 20px;
+    margin-bottom:-100px;
+    height: 400px;
+    width: 300px;
+    background-color: #2a465b;
+    border-radius: 8px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.btnCute,a{
+    width: 100px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: #6ca965;
+    color: #fff;
+}
+
+.btnReg{
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}

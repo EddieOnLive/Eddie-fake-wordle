@@ -9,6 +9,7 @@ app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'wordlefake'
 mysql = MySQL(app)
 
+
 def obtener():
     cur = mysql.connection.cursor()
     cur.execute('SELECT id, user, password FROM user')
@@ -17,6 +18,7 @@ def obtener():
     return data
 
 def getPalabra():
+    global numPalabra
     may = mysql.connection.cursor()
     may.execute("SELECT palabra FROM user WHERE id = %s", [aidi])
     numPalabra = may.fetchall()
@@ -25,9 +27,10 @@ def getPalabra():
     cur.execute("SELECT palabra FROM palabras WHERE id = %s", [numPalabra])
     palabraUsuario = cur.fetchall()
     cur.close()
+    print(numPalabra[0][0])
     return palabraUsuario
 
-
+# ! Renders siempre arriba
 @app.route('/')
 @app.route('/login.html')
 def login():
@@ -45,7 +48,15 @@ def player():
 def menu():
     return render_template('menu.html')
 
-@app.route('/sesion',methods = ['POST'])
+@app.route('/acierto.html')
+def acierto():
+    return render_template('acierto.html')
+
+
+
+
+
+@app.route('/sesion', methods = ['POST'])
 def sesion():
     global aidi
     bandn = True
@@ -84,7 +95,7 @@ def sesion():
             return redirect(url_for('login'))
     return
 
-@app.route('/register',methods = ['POST'])
+@app.route('/register', methods = ['POST'])
 def registrar():
     bandn = False
     if request.method == 'POST':
@@ -107,6 +118,16 @@ def registrar():
             return redirect(url_for("register"))
 
 
-#Esta wea siempre al final
+@app.route('/acierto')
+def alAcertar():
+    cur = mysql.connection.cursor()
+    cur.execute("""
+        UPDATE user
+        SET palabra = %s
+    """, [numPalabra[0][0]+1])
+    mysql.connection.commit()
+    return render_template('acierto.html')
+
+# ! Esta wea siempre al final
 if __name__ == '__main__':
     app.run(debug=True, port=5000, host='0.0.0.0')

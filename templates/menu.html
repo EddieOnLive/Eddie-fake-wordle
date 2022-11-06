@@ -1,22 +1,24 @@
 {% extends './layout.html' %}
+
 {% block title%}menu{%endblock%}
+
+{% block css%}<link rel="stylesheet" href="{{ url_for('static', filename='login.css')}}">{%endblock%}
+
 {% block body %} 
 
+    <div class="fondo">
+        <div class="contenedor">
+            <h1 class="fuente">Bienvenido</h1>
+                <button class="btnCute">
+                    <a href="/player.html">Jugar</a>
+                </button>
+                <button class="btnCute">
+                    <a href="/options.html">Opciones</a>
+                </button>
+                <button class="btnCute">
+                    <a href="/login.html">Logout</a>
+                </button>
+        </div>
+    </div>
 
-    <div>Bienvenido</div>
-    <div>
-        <button>
-            <a href="/player.html">Jugar</a>
-        </button>
-    </div>
-    <div>
-        <button>
-            <a href="/options.html">Opciones</a>
-        </button>
-    </div>
-    <div>
-        <button>
-            <a href="/login.html">Logout</a>
-        </button>
-    </div>
 {% endblock %}

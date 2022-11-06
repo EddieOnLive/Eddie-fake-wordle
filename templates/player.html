@@ -1,47 +1,52 @@
 {% extends './layout.html' %}
-{% block title%}player{%endblock%}
+
+{% block title%} player {%endblock%}
+
+{% block css%}<link rel="stylesheet" href="{{ url_for('static',filename='player.css') }}">{%endblock%}
+
 {% block body %} 
 <input type="text" value="{{palabra.0.0}}" style="display:none" class="input">
-    <div class="cajitas"></div>
-    <div class="botones">
-        <div>
-            <button class="bq">Q</button>
-            <button class="bq">W</button>
-            <button class="bq">E</button>
-            <button class="bq">R</button>
-            <button class="bq">T</button>
-            <button class="bq">Y</button>
-            <button class="bq">U</button>
-            <button class="bq">I</button>
-            <button class="bq">O</button>
-            <button class="bq">P</button>
-        </div>
-        <div>
-            <button class="bq">A</button>
-            <button class="bq">S</button>
-            <button class="bq">D</button>
-            <button class="bq">F</button>
-            <button class="bq">G</button>
-            <button class="bq">H</button>
-            <button class="bq">J</button>
-            <button class="bq">K</button>
-            <button class="bq">L</button>
-        </div>
-        <div>
-            <button>Enviar</button>
-            <button class="bq">Z</button>
-            <button class="bq">X</button>
-            <button class="bq">C</button>
-            <button class="bq">V</button>
-            <button class="bq">B</button>
-            <button class="bq">N</button>
-            <button class="bq">M</button>
-            <button>Borrar</button>
+    <div class="fondo">
+        <div class="cajitas fuente"></div>
+        <div class="botones" >
+            <div>
+                <button class="bq bCute">Q</button>
+                <button class="bw bCute">W</button>
+                <button class="be bCute">E</button>
+                <button class="br bCute">R</button>
+                <button class="bt bCute">T</button>
+                <button class="by bCute">Y</button>
+                <button class="bu bCute">U</button>
+                <button class="bi bCute">I</button>
+                <button class="bo bCute">O</button>
+                <button class="bp bCute">P</button>
+            </div>
+            <div>
+                <button class="ba bCute">A</button>
+                <button class="bs bCute">S</button>
+                <button class="bd bCute">D</button>
+                <button class="bf bCute">F</button>
+                <button class="bg bCute">G</button>
+                <button class="bh bCute">H</button>
+                <button class="bj bCute">J</button>
+                <button class="bk bCute">K</button>
+                <button class="bl bCute">L</button>
+            </div>
+            <div>
+                <button class = "send bBorrarEnviar">Enviar</button>
+                <button class="bz bCute">Z</button>
+                <button class="bx bCute">X</button>
+                <button class="bc bCute">C</button>
+                <button class="bv bCute">V</button>
+                <button class="bb bCute">B</button>
+                <button class="bn bCute">N</button>
+                <button class="bm bCute">M</button>
+                <button class = "back bBorrarEnviar">Borrar</button>
+            </div>
         </div>
     </div>
 
 
-{% block scrip %}
-    <script src="{{ url_for('static',filename='player.js') }}"></script>
-{% endblock %}
+{% block scrip %} <script src="{{ url_for('static',filename='player.js') }}"></script> {% endblock %}
+
 {% endblock %}

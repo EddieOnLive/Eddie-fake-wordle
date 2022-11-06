@@ -1,0 +1,42 @@
+.alineamiento{
+    margin-top: 100px;
+}
+
+.bCute{
+    background-color: #2a465b;
+    align-items: center;
+    width: 45px;
+    height: 60px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.bBorrarEnviar{
+    background-color: #2a465b;
+    width: 70px;
+    height: 60px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.cajas{
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #888888;
+    background-color: #000;
+    margin-top: 6px;
+}
+
+.cajitas{
+    width: 450px;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: auto;
+}

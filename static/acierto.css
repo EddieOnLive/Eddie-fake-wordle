@@ -1,0 +1,13 @@
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    margin: 20px;
+    margin-bottom:-100px;
+    height: 400px;
+    width: 300px;
+    background-color: #2a465b;
+    border-radius: 8px;
+}

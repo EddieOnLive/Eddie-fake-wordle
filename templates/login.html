@@ -1,33 +1,37 @@
 {% extends './layout.html' %}
+
 {% block title%}login{%endblock%}
+
+{% block css%}<link rel="stylesheet" href="{{ url_for('static', filename='login.css')}}">{%endblock%}
+
 {% block body %} 
-    <div>
-        <div>
+    <div class="fondo ">
+        <div class="contenedor">
+            <div class="fuente">
+                <h1>Iniciar Sesión</h1>
+            </div>
+            <div class="inicio-input">
+                <form action="/sesion" method="POST" class="inicio-input">
+                    <input type="text" name="nombre" autocomplete="off" placeholder="Nombre">
+                    <input type="password" name="pass" autocomplete="off"  placeholder="Contraseña">
+                    <button class="btnCute fuente" type="submit">Conectar</button>
+                </form>
+            </div>
             <div>
-                <div>
-                    <h1>Iniciar Sesión</h1>
-                </div>
-                <div>
-                    <form action="/sesion" method="POST">
-                        <input type="text" name="nombre" class="nombre obj" autocomplete="off" placeholder="Nombre">
-                        <input type="password" name="pass" class="pass obj" autocomplete="off"  placeholder="Contraseña">
-                        <button class="button" type="submit">Conectar</button>
-                    </form>
-                </div>
-                <div>
-                    {% with messages = get_flashed_messages()  %}
-                    {% if messages %}
-                        <p>{{messages}}</p>
-                    {% endif %}
-                    {% endwith %}
-                </div>
-                <div>
-                    <p>¿No tienes una cuenta?
-                        <div>
-                            <a href="/register.html">¡Registrarse!</a>
-                        </div>
-                    </p>
-                </div>
+                {% with messages = get_flashed_messages()  %}
+                {% if messages %}
+                    <p>{{messages}}</p>
+                {% endif %}
+                {% endwith %}
+            </div>
+            <div class="fuente btnReg">
+                <p>¿No tienes una cuenta?
+                    <div class="btnReg fuente">
+                        <button class="btnCute">
+                            <a href="/register.html">Registrarse</a>
+                        </button>
+                    </div>
+                </p>
             </div>
         </div>
     </div>
