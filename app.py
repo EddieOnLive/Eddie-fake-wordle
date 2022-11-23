@@ -30,7 +30,7 @@ def getPalabra():
     print(numPalabra[0][0])
     return palabraUsuario
 
-# ! Renders siempre arriba
+# ! Renderizado de templates siempre arriba
 @app.route('/')
 @app.route('/login.html')
 def login():
@@ -54,7 +54,7 @@ def acierto():
 
 
 
-
+# ! Trabajar los templates
 
 @app.route('/sesion', methods = ['POST'])
 def sesion():
@@ -84,7 +84,6 @@ def sesion():
         
         if bandn == True:
             if bandp == True:
-                print(getPalabra())
                 return render_template('menu.html')
             
             else:
@@ -124,9 +123,13 @@ def alAcertar():
     cur.execute("""
         UPDATE user
         SET palabra = %s
-    """, [numPalabra[0][0]+1])
+        WHERE id = %s
+    """, [numPalabra[0][0]+1, aidi])
+    cur.close()
     mysql.connection.commit()
     return render_template('acierto.html')
+
+
 
 # ! Esta wea siempre al final
 if __name__ == '__main__':

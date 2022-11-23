@@ -94,7 +94,6 @@ document.querySelector('.back').addEventListener('click',()=>{
 document.querySelector('.send').addEventListener('click',()=>{
     if (varLet == palabra) {
         window.location.href = "/acierto";
-
         console.log('GOOOOOOOOOOOL');
     }
     else {
