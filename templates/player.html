@@ -7,41 +7,69 @@
 {% block body %} 
 <input type="text" value="{{palabra.0.0}}" style="display:none" class="input">
     <div class="fondo">
-        <div class="cajitas fuente"></div>
+
+        <div class="barraSuperior">
+
+                <a href="/menu.html">
+                    <button class = "barraBotones">
+                        <img src="{{ url_for('static', filename='back.png')}}" class="icRedes" alt="">
+                    </button>
+                </a>
+
+                <a href="https://twitter.com/eddieonlive">
+                    <button class = "barraBotones">
+                        <img src="{{ url_for('static', filename='Twitter.png')}}" class="icRedes" alt="">
+                    </button>
+                </a>
+
+                <a href="https://www.instagram.com/eddieonlive/">
+                    <button class = "barraBotones">
+                        <img src="{{ url_for('static', filename='Instagram.png')}}" class="icRedes" alt="">
+                    </button>
+                </a>
+                
+                    <button class = "Bhint barraBotones">
+                        <img src="{{ url_for('static', filename='hint.png')}}" class="icRedes" alt="">
+                    </button>
+
+        </div>
+
+        <div class="cajitas fuenteCajas"></div>
+
         <div class="botones" >
             <div>
-                <button class="bq bCute">Q</button>
-                <button class="bw bCute">W</button>
-                <button class="be bCute">E</button>
-                <button class="br bCute">R</button>
-                <button class="bt bCute">T</button>
-                <button class="by bCute">Y</button>
-                <button class="bu bCute">U</button>
-                <button class="bi bCute">I</button>
-                <button class="bo bCute">O</button>
-                <button class="bp bCute">P</button>
+                <button class="bq fuenteTeclado bCute bDe" id="botQ">Q</button>
+                <button class="bw fuenteTeclado bCute bDe" id="botW">W</button>
+                <button class="be fuenteTeclado bCute bDe" id="botE">E</button>
+                <button class="br fuenteTeclado bCute bDe" id="botR">R</button>
+                <button class="bt fuenteTeclado bCute bDe" id="botT">T</button>
+                <button class="by fuenteTeclado bCute bDe" id="botY">Y</button>
+                <button class="bu fuenteTeclado bCute bDe" id="botU">U</button>
+                <button class="bi fuenteTeclado bCute bDe" id="botI">I</button>
+                <button class="bo fuenteTeclado bCute bDe" id="botO">O</button>
+                <button class="bp fuenteTeclado bCute bDe" id="botP">P</button>
             </div>
             <div>
-                <button class="ba bCute">A</button>
-                <button class="bs bCute">S</button>
-                <button class="bd bCute">D</button>
-                <button class="bf bCute">F</button>
-                <button class="bg bCute">G</button>
-                <button class="bh bCute">H</button>
-                <button class="bj bCute">J</button>
-                <button class="bk bCute">K</button>
-                <button class="bl bCute">L</button>
+                <button class="ba fuenteTeclado bCute bDe" id="botA">A</button>
+                <button class="bs fuenteTeclado bCute bDe" id="botS">S</button>
+                <button class="bd fuenteTeclado bCute bDe" id="botD">D</button>
+                <button class="bf fuenteTeclado bCute bDe" id="botF">F</button>
+                <button class="bg fuenteTeclado bCute bDe" id="botG">G</button>
+                <button class="bh fuenteTeclado bCute bDe" id="botH">H</button>
+                <button class="bj fuenteTeclado bCute bDe" id="botJ">J</button>
+                <button class="bk fuenteTeclado bCute bDe" id="botK">K</button>
+                <button class="bl fuenteTeclado bCute bDe" id="botL">L</button>
             </div>
             <div>
-                <button class = "send bBorrarEnviar">Enviar</button>
-                <button class="bz bCute">Z</button>
-                <button class="bx bCute">X</button>
-                <button class="bc bCute">C</button>
-                <button class="bv bCute">V</button>
-                <button class="bb bCute">B</button>
-                <button class="bn bCute">N</button>
-                <button class="bm bCute">M</button>
                 <button class = "back bBorrarEnviar">Borrar</button>
+                <button class="bz fuenteTeclado bCute bDe" id="botZ">Z</button>
+                <button class="bx fuenteTeclado bCute bDe" id="botX">X</button>
+                <button class="bc fuenteTeclado bCute bDe" id="botC">C</button>
+                <button class="bv fuenteTeclado bCute bDe" id="botV">V</button>
+                <button class="bb fuenteTeclado bCute bDe" id="botB">B</button>
+                <button class="bn fuenteTeclado bCute bDe" id="botN">N</button>
+                <button class="bm fuenteTeclado bCute bDe" id="botM">M</button>
+                <button class = "send bBorrarEnviar">Enviar</button>
             </div>
         </div>
     </div>

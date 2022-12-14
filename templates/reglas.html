@@ -1,0 +1,23 @@
+{% extends './layout.html' %}
+
+{% block title%}reglas{%endblock%}
+
+{% block css%}<link rel="stylesheet" href="{{ url_for('static', filename='reglas.css')}}">{%endblock%}
+
+{% block body %} 
+<div class="fondo">
+
+    <div class="contenedor">
+
+        <h1 class = "fuente">Bienvenido</h1>
+        <ul class = "fuente">
+            <p>Ingresa una palabra de 5 letras</p>
+            <p>Si la tecla se vuelve de color <img src="{{ url_for('static', filename='letraSi.png')}}" alt=""> significa que la letra pertenece a la palabra</p>
+            <p>Si la tecla se vuelve de color <img src="{{ url_for('static', filename='letraNo.png')}}" alt=""> significa que la letra no pertenece a la palabra</p>
+        </ul>
+        <button class="btnCute">
+            <a href="/menu.html">Volver</a>
+        </button>
+    </div>
+</div>
+{% endblock %}

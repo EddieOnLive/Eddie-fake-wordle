@@ -9,6 +9,7 @@ app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'wordlefake'
 mysql = MySQL(app)
 
+aidi = 0
 
 def obtener():
     cur = mysql.connection.cursor()
@@ -30,7 +31,7 @@ def getPalabra():
     print(numPalabra[0][0])
     return palabraUsuario
 
-# ! Renderizado de templates siempre arriba
+# TODO: Renderizado de templates siempre arriba
 @app.route('/')
 @app.route('/login.html')
 def login():
@@ -52,6 +53,9 @@ def menu():
 def acierto():
     return render_template('acierto.html')
 
+@app.route('/reglas.html')
+def reglamento():
+    return render_template('reglas.html')
 
 
 # ! Trabajar los templates
@@ -87,10 +91,10 @@ def sesion():
                 return render_template('menu.html')
             
             else:
-                flash('Nombre o contraseña incorrecto')
+                flash('Error')
                 return redirect(url_for('login'))
         else:
-            flash('Nombre o contraseña incorrecto')
+            flash('Error')
             return redirect(url_for('login'))
     return
 
@@ -113,7 +117,7 @@ def registrar():
             mysql.connection.commit()
             return redirect(url_for('login'))
         else:
-            flash("Ya existe el nombre de usuario")
+            flash("Ya existe el usuario")
             return redirect(url_for("register"))
 
 

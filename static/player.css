@@ -1,18 +1,39 @@
-.alineamiento{
-    margin-top: 100px;
-}
+.alineamiento{  margin-top: 100px;  }
 
 .bCute{
-    background-color: #2a465b;
     align-items: center;
     width: 45px;
     height: 60px;
     border-radius: 8px;
+}
+
+.bDe{
+    background-color: #2a465b;
     color: #fff;
 }
 
+.bNo{
+    background-color: #757575;
+    color:#fff;
+}
+
+.bSi{
+    background-color: #E4A81D;
+    color: #000;
+}
+
+.bEnviar{
+    background-color: #6ca965;
+    color: #fff;
+}
+
+.bPosCo{
+    background-color: #6ca965;
+    color : #fff;
+}
+
 .bBorrarEnviar{
-    background-color: #2a465b;
+    background-color: #6ca965;
     width: 70px;
     height: 60px;
     border-radius: 8px;
@@ -26,7 +47,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #888888;
+    border: 2px solid #888888;
     background-color: #000;
     margin-top: 6px;
 }
@@ -39,4 +60,33 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin: auto;
+}
+
+.fuenteCajas{
+    font-size:40px;
+    color: #fff;
+}
+
+.fuenteTeclado{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.barraSuperior{
+    align-items: center;
+    width: 550px;
+    height: 65px;
+    border: 2px solid #2c2c2c;
+    display: flex;
+    justify-content: center;
+}
+
+.barraBotones{
+    background-color: transparent;
+    border: none;
+}
+
+.icRedes{
+    height: 60px;
+    width: 60px;
 }

@@ -12,27 +12,27 @@
             </div>
             <div class="inicio-input">
                 <form action="/sesion" method="POST" class="inicio-input">
-                    <input type="text" name="nombre" autocomplete="off" placeholder="Nombre">
-                    <input type="password" name="pass" autocomplete="off"  placeholder="Contraseña">
+                    <input type="text" name="nombre" autocomplete="off" placeholder="Nombre" class="cajasTexto">
+                    <input type="password" name="pass" autocomplete="off"  placeholder="Contraseña" class="cajasTexto">
                     <button class="btnCute fuente" type="submit">Conectar</button>
                 </form>
             </div>
             <div>
-                {% with messages = get_flashed_messages()  %}
-                {% if messages %}
-                    <p>{{messages}}</p>
-                {% endif %}
-                {% endwith %}
+                <p>
+                    {% with messages = get_flashed_messages()  %}
+                    {% if messages %}
+                    {{messages}}
+                    {% endif %}
+                    {% endwith %}
+                </p>
             </div>
-            <div class="fuente btnReg">
-                <p>¿No tienes una cuenta?
-                    <div class="btnReg fuente">
-                        <button class="btnCute">
+                <p class="fuente">¿No tienes cuenta?
+                    <div class="btnReg">
+                        <button class="fuente btnCute">
                             <a href="/register.html">Registrarse</a>
                         </button>
                     </div>
                 </p>
-            </div>
         </div>
     </div>
 {% endblock %}

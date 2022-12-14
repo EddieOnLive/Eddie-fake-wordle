@@ -12,8 +12,8 @@
             </div>
             <div class="inicio-input">
                 <form action="/register" method="POST" class="inicio-input">
-                    <input type="text" name="nombre" autocomplete="off" placeholder="Nombre">
-                    <input type="password" name="pass" autocomplete="off"  placeholder="Contraseña">
+                    <input type="text" name="nombre" autocomplete="off" placeholder="Nombre" class="cajasTexto">
+                    <input type="password" name="pass" autocomplete="off"  placeholder="Contraseña" class="cajasTexto">
                     <button class="btnCute" type="submit">Registrarse</button>
                 </form>
             </div>
@@ -26,15 +26,13 @@
                     {% endwith %}
                 </p>
             </div>
-            <div class="fuente btnReg">
-                <p>¿Ya tienes cuenta?
+                <p class="fuente">¿Ya tienes cuenta?
                     <div>
-                        <button class="btnReg btnCute">
+                        <button class="btnCute">
                             <a href="/login.html">Iniciar Sesión</a>
                         </button>
                     </div>
                 </p>
-            </div>
         </div>
     </div>
  
