@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-10-2022 a las 23:16:11
+-- Tiempo de generación: 14-12-2022 a las 21:55:40
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -191,7 +191,26 @@ INSERT INTO `palabras` (`id`, `palabra`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuario`
+-- Estructura de tabla para la tabla `sugerencias`
+--
+
+CREATE TABLE `sugerencias` (
+  `id` int(11) NOT NULL,
+  `content` varchar(5) NOT NULL,
+  `aidiuser` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `sugerencias`
+--
+
+INSERT INTO `sugerencias` (`id`, `content`, `aidiuser`) VALUES
+(1, 'SALSA', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `user`
 --
 
 CREATE TABLE `user` (
@@ -202,12 +221,14 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `usuario`
+-- Volcado de datos para la tabla `user`
 --
 
 INSERT INTO `user` (`id`, `user`, `password`, `palabra`) VALUES
-(1, 'admin', 'admin', 2),
-(2, 'Imanol', 'Imanol', 2);
+(1, 'admin', 'admin', 10),
+(2, 'Imanol', 'Imanol', 1),
+(3, 'Eddie', '1234', 2),
+(4, 'Rata', '1234', 2);
 
 --
 -- Índices para tablas volcadas
@@ -220,7 +241,13 @@ ALTER TABLE `palabras`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `usuario`
+-- Indices de la tabla `sugerencias`
+--
+ALTER TABLE `sugerencias`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
@@ -233,13 +260,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `palabras`
 --
 ALTER TABLE `palabras`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=151;
 
 --
--- AUTO_INCREMENT de la tabla `usuario`
+-- AUTO_INCREMENT de la tabla `sugerencias`
+--
+ALTER TABLE `sugerencias`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

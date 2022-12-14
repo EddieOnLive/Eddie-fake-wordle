@@ -57,6 +57,10 @@ def acierto():
 def reglamento():
     return render_template('reglas.html')
 
+@app.route('/sugerencias.html')
+def suggestion():
+    return render_template('sugerencias.html')
+
 
 # ! Trabajar los templates
 
@@ -113,12 +117,22 @@ def registrar():
                 bandn = True
         if bandn == True:
             cur = mysql.connection.cursor()
-            cur.execute("INSERT INTO user (user, password, palabra) VALUES (%s, %s, %s)",(name, pasw, 1))
+            cur.execute("INSERT INTO user (user, password, palabra) VALUES (%s, %s, %s)", (name, pasw, 1))
             mysql.connection.commit()
             return redirect(url_for('login'))
         else:
             flash("Ya existe el usuario")
             return redirect(url_for("register"))
+
+
+@app.route('/suggestion', methods = ['POST'])
+def sugerencia():
+    if request.method == 'POST':
+        quack = request.form['sugerir']
+        cur = mysql.connection.cursor()
+        cur.execute("INSERT INTO sugerencias (content, aidiuser) VALUES (%s, %s)", (quack, aidi))
+        mysql.connection.commit()
+        return redirect(url_for('menu'))
 
 
 @app.route('/acierto')

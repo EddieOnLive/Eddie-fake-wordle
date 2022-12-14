@@ -1,0 +1,27 @@
+{% extends './layout.html' %}
+
+{% block title%}sugerencias{%endblock%}
+
+{% block css%}<link rel="stylesheet" href="{{ url_for('static', filename='login.css')}}">{%endblock%}
+
+{% block body %} 
+<div class="fondo ">
+    <div class="contenedor">
+        <div class="fuente">
+                <a href="https://youtu.be/NKb6d69W4ks"><h1>Sugerencias</h1></a>
+        </div>
+        <div class="inicio-input">
+            <h3 class="fuente">Ingrese una palabra de 5 letras</h3>
+            <form action="/suggestion" method="POST" class="inicio-input">
+                <input type="text" name="sugerir" autocomplete="off" placeholder="Aquí" class="cajasTexto">
+                <button class="btnCute fuente" type="submit">Enviar</button>
+            </form>
+        </div>
+        <div>
+            <button class="btnCute">
+                <a href="/menu.html">Volver</a>
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}
